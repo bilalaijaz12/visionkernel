@@ -1,8 +1,5 @@
 # visionkernel
 
-Certainly! Here's a comprehensive README based on everything we have discussed so far:
-
-```
 VisionKernel
 
 VisionKernel is a comprehensive web application developed using Django framework. It incorporates various features such as user authentication, data retrieval from APIs, data visualization, and machine learning tasks. The application aims to provide a platform for managing and analyzing data from multiple sources, visualizing it using interactive charts and graphs, and applying machine learning techniques for further analysis and predictions.
