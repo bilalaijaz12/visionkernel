@@ -1,7 +1,6 @@
 # VisionKernel CLI
 ### BETA Version
 ### VisionKernel Corp.
-### https://nicksimpkins.github.io/visionkernel_cli/
 
 ### REQUIRED: Python 3.9.0 or later
 
