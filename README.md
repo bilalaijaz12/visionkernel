@@ -1,71 +1,50 @@
-# visionkernel
+# VisionKernel CLI
+### BETA Version
+### VisionKernel Corp.
+### https://nicksimpkins.github.io/visionkernel_cli/
 
-VisionKernel
+### REQUIRED: Python 3.9.0 or later
 
-VisionKernel is a comprehensive web application developed using Django framework. It incorporates various features such as user authentication, data retrieval from APIs, data visualization, and machine learning tasks. The application aims to provide a platform for managing and analyzing data from multiple sources, visualizing it using interactive charts and graphs, and applying machine learning techniques for further analysis and predictions.
 
-## Features
+![GitHub Repo stars](https://img.shields.io/github/stars/nicksimpkins/visionkernel_cli)
+![GitHub forks](https://img.shields.io/github/forks/nicksimpkins/visionkernel_cli)
+![GitHub watchers](https://img.shields.io/github/watchers/nicksimpkins/visionkernel_cli)
+![GitHub License](https://img.shields.io/github/license/nicksimpkins/visionkernel_cli)
+![GitHub issues](https://img.shields.io/github/issues/nicksimpkins/visionkernel_cli)
 
-- User Authentication: The application includes a user authentication system that allows users to register, log in, and manage their accounts.
-- API Data Retrieval: It facilitates the retrieval of data from multiple APIs by providing a configurable mechanism to specify API endpoints, authentication details, and data retrieval intervals.
-- Data Visualization: The application provides interactive data visualization capabilities using JavaScript libraries like Chart.js or D3.js. Users can explore and analyze the retrieved data through visually appealing charts, graphs, and tables.
-- Machine Learning: It includes functionality for creating, training, and evaluating machine learning models. Users can perform tasks such as classification, regression, or prediction on the available data using popular machine learning libraries like scikit-learn or TensorFlow.
 
-## Installation
+## About
 
-1. Clone the repository:
+VisionKernel is a data management and analysis tool that allows easy access to cloud databases. Say goodbye to using excel for data management. This open-source CLI tool allows for the rapid processing and analysis of all your data, and makes it easy to upload your excel files into your cloud databases.
 
-   ```bash
-   git clone https://github.com/your-username/project-name.git
-   ```
+### Getting Started
 
-2. Create and activate a virtual environment:
+The VisionKernel CLI allows you to connect to a cloud database from your preferred provider. Adding a database is as easy as running the `visionkernel add cloud-database` command and following the prompts. Once a database is added, you are able to access the previously setup tables and export data to them.
 
-   ```bash
-   python -m venv myenv
-   source myenv/bin/activate
-   ```
 
-3. Install the project dependencies:
+### Exporting data
 
-   ```bash
-   pip install -r requirements.txt
-   ```
+To export data, simply connect to the database and select which Excel files you want to upload. If files are in CSV format, use our conversion tool to convert to Excel before upload. Our program also allows for the creation of tables in your cloud database from the command line.
 
-4. Set up the database:
+### Converting data -- DONE
 
-   ```bash
-   python manage.py migrate
-   ```
+Converting data is simple with our `convert` option. Easily convert a file such as .txt, .xml, .json, .csv or .xls into a different supported file type. The convert feature allows for the quick conversion of data into a more readable or preferred type. Synatax is `python main.py convert example.csv name_of_new_file.xlxs`.
 
-5. Start the development server:
+### Connecting Cloud Database -- DONE (AWS Support)
 
-   ```bash
-   python manage.py runserver
-   ```
+To connect to your cloud database you will need certain information that is unique for every database and every cloud provider. We currently offer AWS support; to connect to a cloud database run `python main.py aws` and follow the prompts.
+AWS RDS: Instance Identifier, Database Name, Username, Password, Port
 
-6. Access the application in your web browser at `http://localhost:8000`.
 
-## Configuration
+### API implementation
 
-- API Configuration: Update the API configurations in `config.py` to specify the API endpoints, authentication details, and data retrieval intervals. Customize it according to the APIs you want to integrate with.
-- Data Visualization: Customize the data visualization components in the respective app's templates and views. Use JavaScript libraries and Django template tags to create interactive and visually appealing visualizations.
-- Machine Learning Models: Modify the machine learning models and tasks based on your specific requirements. Utilize popular machine learning libraries like scikit-learn or TensorFlow to implement and train the models.
+To add an API, check the "Supported APIs" section in the documentation (check link above). If the API you want to access is supported, all you have to do is run the `visionkernel install datafeed API_goes_here`. This will prompt the user for the API key and then import the libraries and save the API to your system.
 
-## Contributing
+### Adding services
 
-Contributions are welcome! If you encounter any issues or have suggestions for improvements, please open an issue or submit a pull request. Follow the guidelines in the CONTRIBUTING.md file for contributing to the project.
+To add a service for charting, graphing, data analysis or any other reason check out the "Supported Services" section of our documentation (check link above). If the service you are looking for is supported, run `visionkernel install service service_goes_here`. To launch the service from the command line, run `visionkernel run service service_goes_here < example.txt`. This will feed the file into the service and display the desired results.  
 
-## License
+### Thank you!
 
-[MIT License](LICENSE)
+Thank you for downloading the VisionKernel CLI! If you have comments or suggestions feel free to reach out at visionkernel@gmail.com as we would love to hear from you. Please reach out if you have an API or service you would like added to VisionKernel, we will do our best to add support for it in a timely manner.
 
-## Resources
-
-- Django Documentation: [https://docs.djangoproject.com/](https://docs.djangoproject.com/)
-- Chart.js Documentation: [https://www.chartjs.org/docs/](https://www.chartjs.org/docs/)
-- scikit-learn Documentation: [https://scikit-learn.org/stable/documentation.html](https://scikit-learn.org/stable/documentation.html)
-- TensorFlow Documentation: [https://www.tensorflow.org/api_docs](https://www.tensorflow.org/api_docs)
-```
-
-Feel free to modify and expand on this README template based on your project's specific details, requirements, and additional resources you want to include.
